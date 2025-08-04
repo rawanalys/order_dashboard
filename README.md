@@ -1,68 +1,51 @@
-# CodeIgniter 4 Application Starter
+# 🧾 Customer Order Dashboard
 
-## What is CodeIgniter?
+The Customer Order Dashboard is a web-based application built with **CodeIgniter 4**, **MySQL**, and **vanilla JavaScript**. It provides a user-friendly interface to view, search, and paginate customer data along with order counts.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+---
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## 🚀 Features
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+- REST API with paginated customer data
+- Frontend search by name or email
+- Display 50 customers per page with Next/Previous navigation
+- Responsive and clean UI with a styled table
+- Built on MVC architecture with secure backend
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+---
 
-## Installation & updates
+## 🛠️ Tech Stack
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+- **Backend:** PHP 8.1+, CodeIgniter 4
+- **Database:** MySQL
+- **Frontend:** HTML, CSS, JavaScript (No framework)
+- **API:** RESTful endpoints for customer data
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+---
 
-## Setup
+## 🔍 API Overview
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+- `GET /api/customers?page=1&limit=50`: Returns paginated customer data
+- Supports dynamic search and frontend filtering
 
-## Important Change with index.php
+---
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## 📦 Features in Detail
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+- Customer records shown in a modern table layout
+- Responsive input field for real-time filtering
+- Efficient pagination controls
+- Fallback messages for loading errors or empty states
 
-**Please** read the user guide for a better explanation of how CI4 works!
+---
 
-## Repository Management
+## 🧠 Notes
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+- You can configure memory limits if needed (`memory_limit = 512M` in `.env` or `php.ini`)
+- All data is dynamically fetched and rendered using JavaScript
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+---
 
-## Server Requirements
+## 📬 Contact
 
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+For any questions or collaboration, feel free to reach out via LinkedIn or raise an issue in this repo.
