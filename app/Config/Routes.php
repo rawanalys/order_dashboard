@@ -14,3 +14,5 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], function($routes) 
     $routes->get('customers', 'CustomerApi::index');
     $routes->get('customers/(:num)', 'CustomerApi::show/$1');
 });
+
+$routes->get('api/orders/customer/(:num)', 'Api\Orders::getOrdersByCustomer/$1');
